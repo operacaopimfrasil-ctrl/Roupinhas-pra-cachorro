@@ -1200,7 +1200,6 @@ footer a:hover{color:var(--pink)}
 .mob-bar.show{opacity:1;transform:translateY(0)}
 @media(max-width:767px){
   .mob-bar{display:flex;align-items:center;justify-content:space-between;gap:1rem}
-  body{padding-bottom:82px}
 }
 .mob-price .lbl{font-size:.68rem;color:var(--text-2);display:block;font-weight:500}
 .mob-price .val{
@@ -1498,4 +1497,124 @@ footer a:hover{color:var(--pink)}
   background:var(--green-soft);color:var(--green);
   padding:.2rem .6rem;border-radius:var(--r-full);
   flex-shrink:0;
+}
+
+/* ════════════════════════════════════════
+   MOBILE FIRST — OTIMIZAÇÃO COMPLETA
+   Prioridade máxima: 90% do tráfego é mobile
+════════════════════════════════════════ */
+
+/* Bloquear scroll horizontal em toda a página */
+html{overflow-x:hidden}
+body{overflow-x:hidden;max-width:100%}
+
+/* Segurança global para imagens */
+img{max-width:100%;height:auto}
+
+@media(max-width:640px){
+
+  /* ── Hero pill: quebra texto e centraliza ── */
+  .hero-pill{
+    white-space:normal;
+    text-align:center;
+    justify-content:center;
+    max-width:calc(100vw - 3rem);
+    line-height:1.75;
+    font-size:.7rem;
+  }
+
+  /* ── Hero título: clamp menor ── */
+  .hero-title{font-size:clamp(1.65rem,7.5vw,2.3rem)}
+  .hero-sub{font-size:.9rem}
+
+  /* ── Todos os botões: permite quebra de texto ── */
+  .btn{white-space:normal;line-height:1.35;text-align:center}
+  .btn-cta{
+    font-size:.93rem;
+    padding:.95rem 1.25rem;
+    letter-spacing:.1px;
+  }
+
+  /* ── Seção hero: garantir padding lateral ── */
+  .hero{padding:5.5rem 0 6rem}
+  .hero-copy{min-width:0}
+
+  /* ── Hero proof: wrap em telas muito pequenas ── */
+  .hero-proof{gap:.9rem}
+  .cta-note{font-size:.72rem}
+
+  /* ── Section titles globais ── */
+  .section-title{font-size:clamp(1.4rem,5.8vw,2rem)}
+  .section-sub{font-size:.9rem}
+
+  /* ── Oferta dark box: padding compacto ── */
+  .preco-break{margin:0 auto 1.6rem}
+  .preco-break p{font-size:clamp(.85rem,4.5vw,1.05rem)}
+  .oferta-caixa-topo{padding:.8rem 1rem}
+  .oferta-chip{font-size:.79rem}
+  .oferta-preco-bloco{padding:1.4rem 1rem 1rem}
+  .oferta-preco-val{font-size:clamp(3.4rem,17vw,4.8rem);letter-spacing:-1px}
+  .oferta-preco-val sub{font-size:1.3rem}
+  .oferta-preco-val span{font-size:2rem}
+  .economia-badge{font-size:.78rem;padding:.65rem .8rem;letter-spacing:.15px;margin:.85rem 1rem .1rem}
+  .oferta-micro{font-size:.8rem;padding:.7rem 1rem .85rem}
+  .oferta-bullets{padding:.9rem 1rem;gap:.4rem;grid-template-columns:1fr}
+  .oferta-bullets li{font-size:.8rem}
+  .oferta-caixa .cta-wrap{padding:1rem 1rem .4rem}
+  .oferta-trust{padding:.7rem 1rem 1.1rem;gap:.55rem}
+  .oferta-trust-item{font-size:.67rem}
+  .cta-note-dark{font-size:.72rem}
+
+  /* ── Valor stack: compacto ── */
+  .valor-card{padding:.75rem .9rem;gap:.75rem}
+  .valor-check{width:26px;height:26px;font-size:.78rem}
+  .valor-name{font-size:.83rem}
+  .valor-desc{font-size:.7rem}
+  .valor-price-tag{font-size:.78rem;padding:.18rem .5rem}
+  .valor-total-row{padding:.85rem 1rem}
+  .valor-total-label{font-size:.8rem}
+  .valor-total-val{font-size:1.25rem}
+
+  /* ── Showcase bullets: 2 colunas em mobile ── */
+  .showcase-bullets{
+    grid-template-columns:1fr 1fr;
+    padding:1.1rem;
+    gap:.5rem .6rem;
+  }
+  .showcase-bullets li{font-size:.79rem}
+
+  /* ── Depoimentos ── */
+  .depo-quote{font-size:.84rem}
+  .social-rating{flex-direction:column;gap:.5rem}
+
+  /* ── FAQ: padding menor ── */
+  .faq-btn{font-size:.88rem;padding:.9rem .1rem}
+  .faq-ans p{font-size:.85rem}
+
+  /* ── Módulos ── */
+  .mod-card{padding:1.1rem 1rem}
+
+  /* ── Bônus ── */
+  .bonus-card{padding:1.25rem 1rem}
+  .bonus-pip{font-size:.7rem}
+  .bonus-card h4{font-size:1rem}
+
+  /* ── CTA final ── */
+  .cta-final{padding:4rem 1.25rem}
+  .cta-final .btn-cta{font-size:.93rem}
+
+  /* ── Footer ── */
+  .footer-links{gap:1rem}
+  footer p,.footer-disc{font-size:.74rem}
+}
+
+@media(max-width:400px){
+  /* Telas muito pequenas (320px–400px) */
+  .hero-proof{flex-wrap:wrap;gap:.6rem}
+  .proof-sep{display:none}
+  .showcase-bullets{grid-template-columns:1fr}
+  .hero-title{font-size:1.55rem}
+  .oferta-preco-val{font-size:3rem}
+  .economia-badge{font-size:.73rem}
+  .btn-cta{font-size:.87rem}
 }
